@@ -6,6 +6,13 @@ public abstract class Funcionario {
     private   double salario;
 
 
+
+    public Funcionario(String nome, String CPF, double salario) {
+        this.nome = nome;
+        this.CPF = CPF;
+        this.salario = salario;
+    }
+
     public double getBonificacao(){
         return this.salario * 0.05;
     }

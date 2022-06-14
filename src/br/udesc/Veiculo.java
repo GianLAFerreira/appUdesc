@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public abstract class Veiculo {
 
-    private String modelo;
-    private String placa;
-    private int    ano;
-    private double valor;
+    protected String modelo;
+    protected String placa;
+    protected int    ano;
+    protected double valor;
 
     public Veiculo(String modelo, String placa, int ano, double valor){
         this.modelo = modelo;
@@ -16,7 +16,11 @@ public abstract class Veiculo {
         this.valor  = valor;
     }
 
-    public abstract double getConcerto();
+    public Veiculo() {
+        this.valor  = valor;
+    }
+
+    // public abstract double getConcerto();
 
     public String getModelo() {
         return this.modelo;
@@ -62,6 +66,8 @@ public abstract class Veiculo {
     public int hashCode() {
         return Objects.hash(modelo, placa, ano, valor);
     }
+
+    public abstract double getConcerto();
 
     @Override
     public String toString() {

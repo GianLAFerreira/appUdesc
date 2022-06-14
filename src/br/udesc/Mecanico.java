@@ -1,9 +1,7 @@
 package br.udesc;
 
-public class Gerente  extends Funcionario{
-
-
-    public Gerente(String nome, String CPF, double salario) {
+public class Mecanico extends Funcionario{
+    public Mecanico(String nome, String CPF, double salario) {
         super(nome, CPF, salario);
     }
 
@@ -18,3 +16,4 @@ public class Gerente  extends Funcionario{
         return super.toString();
     }
 }
+

@@ -4,25 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servico {
-    private ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    private ArrayList<Veiculo>     veiculos     = new ArrayList<>();
+    private String descricao;
+    private String funcionarios;
+    private String veiculos;
 
-    public Servico(Funcionario funcionario, Veiculo veiculo) {
-        funcionarios.add(funcionario);
-        veiculos.add(veiculo);
-    }
-
-
-    public List<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-
-    public void setFuncionarios(List<Funcionario> funcionarios) {
-        this.funcionarios = (ArrayList<Funcionario>) funcionarios;
+    public Servico(String descricao, String funcionarios, String veiculos) {
+        this.descricao    = descricao;
+        this.funcionarios = funcionarios;
+        this.veiculos     = veiculos;
     }
 
     @Override
     public String toString() {
-        return "Servico: " + funcionarios + veiculos;
+        return "Servico{" +
+                "descricao='"      + this.descricao + '\'' +
+                ", funcionarios='" + this.funcionarios + '\'' +
+                ", veiculos='"     + this.veiculos + '\'' +
+                '}';
     }
 }
